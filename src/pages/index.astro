@@ -36,6 +36,7 @@ import Footer from "../components/footer.astro";
 
 	<script>
 		// Function to handle button click event
+		// Function to handle button click event
 		function copyContent() {
 			// Get the element containing the content to be copied
 			const copyElement = document.querySelector("div#copy");
@@ -55,8 +56,17 @@ import Footer from "../components/footer.astro";
 			// Clear the selection
 			selection.removeAllRanges();
 
-			// Alert the user that the content has been copied
-			alert("Content copied!");
+			// Get the copied content
+			const copiedContent = copyElement.textContent;
+
+			// Count the characters in the copied content
+			const characterCount = copiedContent.length;
+
+			// Alert the user with the character count
+			alert(`Content copied! Character count: ${characterCount}`);
+
+			// Log the character count to the console for testing
+			console.log(`Character count: ${characterCount}`);
 		}
 
 		// Add a click event listener to the button
