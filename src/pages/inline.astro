@@ -1,0 +1,76 @@
+---
+import FooterInline from "../components/footer_inline.astro";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Futurehome footer</title>
+    </head>
+    <body>
+        <div id="copy_wrap">
+            <FooterInline />
+        </div>
+        <button id="copyButton">Copy Content</button>
+    </body>
+    <style>
+        body {
+            background-color: white;
+            text-align: center;
+        }
+        #copy_wrap {
+            padding: 6%;
+            background-color: white;
+        }
+        #copyButton {
+            padding: 12px 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            background-color: white;
+            cursor: copy;
+        }
+    </style>
+
+    <script>
+        // Function to handle button click event
+        // Function to handle button click event
+        function copyContent() {
+            // Get the element containing the content to be copied
+            const copyElement = document.querySelector("div#copy");
+
+            // Create a range and select the content inside the copyElement
+            const range = document.createRange();
+            range.selectNode(copyElement);
+
+            // Create a selection object and add the range to it
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+            // Copy the selected content to the clipboard
+            document.execCommand("copy");
+
+            // Clear the selection
+            selection.removeAllRanges();
+
+            // Get the copied content
+            const copiedContent = copyElement.textContent;
+
+            // Count the characters in the copied content
+            const characterCount = copiedContent.length;
+
+            // Alert the user with the character count
+            alert(`Content copied! Character count: ${characterCount}`);
+
+            // Log the character count to the console for testing
+            console.log(`Character count: ${characterCount}`);
+        }
+
+        // Add a click event listener to the button
+        const copyButton = document.getElementById("copyButton");
+        copyButton.addEventListener("click", copyContent);
+    </script>
+</html>

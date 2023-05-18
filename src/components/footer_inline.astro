@@ -1,0 +1,144 @@
+---
+const campaign_name = "Discover what's new in Futurehome";
+const current_image = "/campaign_image.jpg";
+const campaign_link = "http://currentcampaign.futurehome.no/";
+const facebook_link = "https://facebook.com/futurehome.no/";
+const linkedin_link = "https://www.linkedin.com/company/future-home/";
+const youtube_link = "https://www.youtube.com/@FuturehomeNo";
+const instagram_link = "https://www.instagram.com/futurehome.no/";
+const privacy_link = "https://www.futurehome.io/no/personvernerklaering";
+const terms_link = "https://www.futurehome.io/no/tos-norwegian";
+---
+
+<div id="copy">
+    <table
+        style="max-width: 564px; font-family: 'Work Sans', Arial, sans-serif; font-weight: 400; color: #000;padding:20px;"
+        cellpadding="0"
+        cellspacing="0"
+        border="0"
+    >
+        <tr>
+            <td style="text-align: left;">
+                <img
+                    src="/Futurehome_logo.png"
+                    alt="Logo"
+                    width="152"
+                    href="https://www.futurehome.io"
+                />
+            </td>
+        </tr>
+        <tr style="height:10px;"></tr>
+        <tr>
+            <td style="text-align: left;">
+                <a
+                    href={campaign_link}
+                    style="color: #000; text-decoration: none;"
+                >
+                    <img
+                        src={current_image}
+                        alt={campaign_name}
+                        style="border-radius: 10px; width: 100%;"
+                    />
+                </a>
+            </td>
+        </tr>
+        <tr style="height:16px;"></tr>
+        <tr>
+            <td style="text-align: left; font-size: 14px;padding-left:15px;">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="display: inline;">
+                        <a
+                            href="https://www.stromkontroll.no"
+                            style="color: #000; text-decoration: none;"
+                            >stromkontroll.no</a
+                        >
+                    </li>
+                    <li
+                        style="margin-left:4px;margin-right:4px;display: inline;"
+                    >
+                        |
+                    </li>
+
+                    <li style="display: inline;">
+                        <a
+                            href="https://support.futurehome.no/hc/en-no"
+                            style="color: #000; text-decoration: none; "
+                            >support</a
+                        >
+                    </li>
+                    <li
+                        style="margin-left:4px;margin-right:4px;display: inline;"
+                    >
+                        |
+                    </li>
+
+                    <li style="display: inline;">
+                        <a
+                            href="https://forum.futurehome.io/"
+                            style="color: #000; text-decoration: none;">forum</a
+                        >
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr style="height:17px;"></tr>
+        <tr>
+            <td style="text-align: right;">
+                <a href={facebook_link}
+                    ><img
+                        src="/facebook.png"
+                        alt="Facebook"
+                        width="36"
+                        style="margin-right: 3.2%;"
+                    /></a
+                >
+                <a href={linkedin_link}
+                    ><img
+                        src="/linkedin.png"
+                        alt="LinkedIn"
+                        width="36"
+                        style="margin-right: 3.2%;"
+                    /></a
+                >
+                <a href={instagram_link}
+                    ><img
+                        src="/instagram.png"
+                        alt="Instagram"
+                        width="36"
+                        style="margin-right: 3.2%;"
+                    /></a
+                >
+                <a href={youtube_link}
+                    ><img src="/youtube.png" alt="Youtube" width="36" /></a
+                >
+            </td>
+        </tr>
+        <tr style="height:8px;"></tr>
+        <tr>
+            <td style="border-top: 2px solid black;"></td>
+        </tr>
+        <tr style="height:13px;"></tr>
+        <tr>
+            <td style="text-align: left; font-size: 8px;">
+                <span>© Copyright 2023 Futurehome AS</span>
+                <span style="float: right;"
+                    ><a
+                        href={terms_link}
+                        style="color: #000; text-decoration: none;"
+                        >Terms &amp; Conditions</a
+                    ></span
+                >
+                <span style="float: right;margin-left: 6px;margin-right: 6px;"
+                    >|</span
+                >
+                <span style="float: right;"
+                    ><a
+                        href={privacy_link}
+                        style="color: #000; text-decoration: none;"
+                        >Privacy Policy</a
+                    ></span
+                >
+            </td>
+        </tr>
+    </table>
+</div>
